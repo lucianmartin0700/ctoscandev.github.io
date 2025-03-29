@@ -1,1 +1,61 @@
-<h1>Page title here</h1>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affichage Carte</title>
+    <link href="https://lucianmartin0700.github.io/vendor/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5">Affichage Carte Bancaire</h1>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card-container">
+                    <div class="credit-card" id="creditCard">
+                        <div class="credit-card-front">
+                            <div class="card-type" id="cardType"></div>
+                            <div class="card-number" id="cardNumberDisplay">•••• •••• •••• ••••</div>
+                            <div class="card-expiry">
+                                <span class="exp-label">EXP</span>
+                                <span id="cardExpiryDisplay">MM/AA</span>
+                            </div>
+                            <div class="card-holder" id="cardHolderDisplay">NOM PRÉNOM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="form-container">
+                    <form id="creditCardForm">
+                        <div class="mb-3">
+                            <label for="cardHolder" class="form-label">Titulaire de la Carte</label>
+                            <input type="text" class="form-control" id="cardHolder" placeholder="Marine Le Pen" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="cardNumber" class="form-label">Numéro de Carte</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="expiryDate" class="form-label">Date d'Expiration</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery-3.7.1.min.js"></script>
+    <script src="../vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

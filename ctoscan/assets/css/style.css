@@ -1,1 +1,176 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.container {
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.card-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.credit-card {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-image: url('https://lucianmartin0700.github.io/ctoscan/assets/img/bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 25px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+}
+
+.credit-card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    padding: 25px;
+}
+
+.card-number {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.card-holder, .card-expiry {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #0d6efd;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.card-type {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 78px;
+    height: 52px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-holder {
+    position: absolute;
+    bottom: 30px;
+    left: 25px;
+}
+
+.card-expiry {
+    position: absolute;
+    bottom: 50px;
+    left: 47%;
+    transform: translateX(-60%);
+    display: flex;
+    align-items: center;
+}
+
+.exp-label {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.card-v {
+    width: 78px;
+    height: 52px;
+    top: 20px;
+}
+
+.card-m {
+    width: 117px;
+    height: 78px;
+    top: 10px;
+}
+
+@media (max-width: 767px) {
+    .credit-card {
+        height: 0;
+        padding-bottom: 62.5%;
+    }
+
+    .card-number {
+        font-size: 1.5rem;
+        margin-top: 37%;
+        margin-bottom: 10px;
+    }
+
+    .card-holder, .card-expiry {
+        font-size: 1rem;
+    }
+
+    .card-holder {
+        bottom: 20px;
+    }
+
+    .card-expiry {
+        bottom: 50px;
+    }
+
+    .card-type {
+        width: 60px;
+        height: 40px;
+    }
+
+    .card-v {
+        width: 78px;
+        height: 52px;
+        top: 20px;
+    }
+    
+    .card-m {
+        width: 117px;
+        height: 78px;
+        top: 10px;
+    }
+}
